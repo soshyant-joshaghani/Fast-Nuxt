@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { ApiError } from '~/lib/modules/global/utils/api-error';
+import { ApiError } from '~/lib/modules/base/utils/api-error';
 import {
   createUser,
   deleteUser,
   listUsers,
   updateUser,
   type ManagedUser,
-} from '~/lib/modules/base/users-api';
+} from '~/lib/modules/base/users/api';
 import { cn } from '~/lib/utils';
-import { Button } from '~/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
-import { Switch } from '~/components/ui/switch';
+import { Button } from '~/lib/modules/base/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/lib/modules/base/ui/card';
+import { Input } from '~/lib/modules/base/ui/input';
+import { Label } from '~/lib/modules/base/ui/label';
+import { Switch } from '~/lib/modules/base/ui/switch';
 
 const { user, token, isLoading, logout } = useAuth();
 

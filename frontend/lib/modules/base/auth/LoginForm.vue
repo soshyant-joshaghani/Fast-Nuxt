@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { fetchCurrentUser, loginWithPassword, signupWithPrivateRoute } from '~/lib/modules/global/utils/auth-api';
+import { fetchCurrentUser, loginWithPassword, signupWithPrivateRoute } from '~/lib/modules/base/utils/auth-api';
 import { cn } from '~/lib/utils';
-import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
+import { Button } from '~/lib/modules/base/ui/button';
+import { Input } from '~/lib/modules/base/ui/input';
 
 const props = withDefaults(defineProps<{ redirectTo?: string }>(), {
   redirectTo: '/',

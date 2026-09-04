@@ -8,9 +8,16 @@ export default defineNuxtConfig({
 
   modules: ['shadcn-nuxt', '@vite-pwa/nuxt'],
 
+  components: {
+    dirs: [
+      { path: '~/lib/modules/base/ui', pathPrefix: false },
+      { path: '~/lib/modules/base', pathPrefix: false, extensions: ['vue'], ignore: ['**/ui/**'] },
+    ],
+  },
+
   shadcn: {
     prefix: '',
-    componentDir: './components/ui',
+    componentDir: './lib/modules/base/ui',
   },
 
   css: ['~/assets/css/main.css'],

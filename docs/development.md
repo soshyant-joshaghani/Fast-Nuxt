@@ -123,4 +123,4 @@ cd frontend
 npx shadcn-vue@latest add button
 ```
 
-Generated components land in `frontend/components/ui/`. Config: `components.json`.
+Generated components land in `frontend/lib/modules/base/ui/`. Config: `components.json`.

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Briefcase, Home, Users } from 'lucide-vue-next';
-import { APP_NAME } from '~/lib/modules/global';
+import { APP_NAME } from '~/lib/modules/base';
 import {
   Sidebar,
   SidebarContent,
@@ -12,7 +12,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '~/components/ui/sidebar';
+} from '~/lib/modules/base/ui/sidebar';
 
 const route = useRoute();
 const { user } = useAuth();

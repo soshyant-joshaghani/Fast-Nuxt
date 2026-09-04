@@ -170,14 +170,14 @@ Open `http://dashboard.localhost/sample/notes` after starting dev to see the UI.
 Nuxt 3 routes live under `frontend/pages/`. The dashboard shell provides:
 
 - `pages/(dashboard).vue` — authenticated layout (sidebar + header)
-- `components/layout/` — `AppSidebar`, `Header`, `UserNav`, `ThemeToggle`
-- `components/auth/LoginForm.vue` — login UI
+- `lib/modules/base/` — `AppSidebar`, `Header`, `UserNav`, `ThemeToggle`
+- `lib/modules/base/auth/LoginForm.vue` — login UI
 - `composables/useAuth.ts` — JWT session state (token, user, login/logout)
 - `middleware/auth.global.ts` — route protection
 
-Feature pages call the FastAPI backend via `fetch` using `API_BASE_URL` from `frontend/lib/config/backend.ts`. Pass auth headers via `useAuth().getToken()` or helpers in `~/lib/modules/global/utils/auth-fetch.ts`.
+Feature pages call the FastAPI backend via `fetch` using `API_BASE_URL` from `frontend/lib/config/backend.ts`. Pass auth headers via `useAuth().getToken()` or helpers in `~/lib/modules/base/utils/auth-fetch.ts`.
 
-shadcn-vue components live in `frontend/components/ui/`. Add new primitives with `npx shadcn-vue@latest add <component>` from `frontend/` (config: `components.json`).
+shadcn-vue components live in `frontend/lib/modules/base/ui/`. Add new primitives with `npx shadcn-vue@latest add <component>` from `frontend/` (config: `components.json`).
 
 Nuxt gives access to the full JS/TS ecosystem — install npm packages (Three.js, Babylon.js, charts, etc.) in the `frontend` workspace.
 

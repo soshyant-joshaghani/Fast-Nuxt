@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { LogOut } from 'lucide-vue-next';
-import { Avatar, AvatarFallback } from '~/components/ui/avatar';
-import { Button } from '~/components/ui/button';
+import { Avatar, AvatarFallback } from '~/lib/modules/base/ui/avatar';
+import { Button } from '~/lib/modules/base/ui/button';
 
 const { user, logout } = useAuth();
 

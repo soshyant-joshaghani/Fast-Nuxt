@@ -47,13 +47,13 @@ Sibling kits (Fast-Next, Fast-Svelte, Fast-Nuxt, Fast-Rio) stay in sync on share
 | App feature (backend) | `backend/app/modules/apps/<name>/` |
 | App feature (frontend client) | `frontend/lib/modules/apps/<name>/` |
 | Nuxt routes | `frontend/pages/` (`login.vue`, `(dashboard)/`) |
-| Dashboard shell | `frontend/components/layout/` |
-| shadcn-vue UI primitives | `frontend/components/ui/` |
+| Dashboard shell | `frontend/lib/modules/base/` |
+| shadcn-vue UI primitives | `frontend/lib/modules/base/ui/` |
 | Auth composable | `frontend/composables/useAuth.ts` |
 | Auth middleware | `frontend/middleware/auth.global.ts` |
 | Platform auth/users | `backend/app/modules/base/` |
 | System/health | `backend/app/modules/system/` |
-| Shared frontend utilities | `frontend/lib/modules/global/` |
+| Shared frontend utilities | `frontend/lib/modules/base/` |
 | Shared config | `backend/app/core/config.py`, `.env` |
 | Migrations | `backend/app/alembics/core/versions/` |
 | Backend tests | `tests/backend/` (mirror module paths) |
@@ -108,9 +108,9 @@ Do **not** introduce a separate application-exception hierarchy or custom error 
 
 - Nuxt 3 is first-class — implement UI in feature pages and `lib/modules/apps/<name>/api.ts`.
 - Use `frontend/pages/(dashboard)/` for authenticated pages; `login.vue` for auth.
-- Dashboard shell: `frontend/components/layout/` (sidebar, header, theme toggle).
-- **Styling:** Tailwind + shadcn-vue only. No `<style>` / scoped CSS in components or pages — utility classes and `components/ui/` primitives. Theme tokens live only in `frontend/assets/css/main.css`.
-- UI components: shadcn-vue in `frontend/components/ui/` — add via `npx shadcn-vue@latest add <component>` from `frontend/`.
+- Dashboard shell: `frontend/lib/modules/base/` (sidebar, header, theme toggle).
+- **Styling:** Tailwind + shadcn-vue only. No `<style>` / scoped CSS in components or pages — utility classes and `lib/modules/base/ui/` primitives. Theme tokens live only in `frontend/assets/css/main.css`.
+- UI components: shadcn-vue in `frontend/lib/modules/base/ui/` — add via `npx shadcn-vue@latest add <component>` from `frontend/`.
 - Auth: `useAuth()` from `composables/useAuth.ts` — token and user state, login/logout helpers.
 - Import API base URL from `~/lib/config/backend` — do not hard-code URLs.
 - Env var: `NUXT_PUBLIC_API_BASE_URL` (default `/api/v1` in dev via Nitro proxy).

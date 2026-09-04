@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Moon, Sun } from 'lucide-vue-next';
-import { Button } from '~/components/ui/button';
+import { Button } from '~/lib/modules/base/ui/button';
 
 const isDark = ref(true);
 

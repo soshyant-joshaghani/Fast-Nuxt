@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { SidebarInset, SidebarProvider } from '~/components/ui/sidebar';
-import AppSidebar from '~/components/layout/AppSidebar.vue';
-import Header from '~/components/layout/Header.vue';
+import { SidebarInset, SidebarProvider } from '~/lib/modules/base/ui/sidebar';
+import AppSidebar from '~/lib/modules/base/AppSidebar.vue';
+import Header from '~/lib/modules/base/Header.vue';
 
 const { isAuthenticated, isLoading } = useAuth();
 </script>

@@ -9,9 +9,9 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "~/components",
+    "components": "~/lib/modules/base",
     "utils": "~/lib/utils",
-    "ui": "~/components/ui",
+    "ui": "~/lib/modules/base/ui",
     "lib": "~/lib"
   },
   "iconLibrary": "lucide"

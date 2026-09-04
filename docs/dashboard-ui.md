@@ -43,8 +43,8 @@ FoxG foundation kits (**Fast-Next**, **Fast-Nuxt**, **Fast-Rio**) share the same
 
 | Kit | Shell location | UI library |
 |-----|----------------|------------|
-| Fast-Next | `frontend/src/components/layout/`, `frontend/src/app/(dashboard)/` | shadcn/ui (React) |
-| Fast-Nuxt | `frontend/components/layout/`, `frontend/pages/(dashboard)/` | shadcn-vue (`frontend/components/ui/`) |
+| Fast-Next | `frontend/src/lib/modules/base/`, `frontend/src/app/(dashboard)/` | shadcn/ui (React) |
+| Fast-Nuxt | `frontend/lib/modules/base/`, `frontend/pages/(dashboard)/` | shadcn-vue (`frontend/lib/modules/base/ui/`) |
 | Fast-Rio | `frontend/src/components/sidebar.py`, `frontend/src/components/root_component.py` | Reflex components |
 
 ### Fast-Nuxt file map
@@ -53,12 +53,12 @@ FoxG foundation kits (**Fast-Next**, **Fast-Nuxt**, **Fast-Rio**) share the same
 |------|---------|
 | `pages/(dashboard).vue` | Authenticated layout wrapper (sidebar + header) |
 | `pages/login.vue` | Public login page |
-| `components/layout/AppSidebar.vue` | Left navigation |
-| `components/layout/Header.vue` | Top bar |
-| `components/layout/UserNav.vue` | User menu + logout |
-| `components/layout/ThemeToggle.vue` | Light/dark switch |
-| `components/auth/LoginForm.vue` | Login/signup form |
-| `components/ui/` | shadcn-vue primitives (Button, Table, Card, …) |
+| `lib/modules/base/AppSidebar.vue` | Left navigation |
+| `lib/modules/base/Header.vue` | Top bar |
+| `lib/modules/base/UserNav.vue` | User menu + logout |
+| `lib/modules/base/ThemeToggle.vue` | Light/dark switch |
+| `lib/modules/base/auth/LoginForm.vue` | Login/signup form |
+| `lib/modules/base/ui/` | shadcn-vue primitives (Button, Table, Card, …) |
 | `components.json` | shadcn-vue CLI config |
 
 Add new shadcn-vue components from `frontend/`:

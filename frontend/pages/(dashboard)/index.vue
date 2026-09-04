@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { toSameOriginApiUrl } from '~/lib/config/api-url';
 import { apiBaseUrl } from '~/lib/config/backend';
-import { fetchCurrentUser } from '~/lib/modules/global/utils/auth-api';
-import { Badge } from '~/components/ui/badge';
-import { Button } from '~/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
+import { fetchCurrentUser } from '~/lib/modules/base/utils/auth-api';
+import { Badge } from '~/lib/modules/base/ui/badge';
+import { Button } from '~/lib/modules/base/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/lib/modules/base/ui/card';
 
 const { getToken } = useAuth();
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import LoginForm from '~/components/auth/LoginForm.vue';
-import { APP_NAME } from '~/lib/modules/global';
+import LoginForm from '~/lib/modules/base/auth/LoginForm.vue';
+import { APP_NAME } from '~/lib/modules/base';
 
 definePageMeta({
   layout: false,

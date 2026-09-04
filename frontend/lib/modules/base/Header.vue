@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { SidebarTrigger } from '~/components/ui/sidebar';
-import { Separator } from '~/components/ui/separator';
-import ThemeToggle from '~/components/layout/ThemeToggle.vue';
-import UserNav from '~/components/layout/UserNav.vue';
+import { SidebarTrigger } from '~/lib/modules/base/ui/sidebar';
+import { Separator } from '~/lib/modules/base/ui/separator';
+import ThemeToggle from '~/lib/modules/base/ThemeToggle.vue';
+import UserNav from '~/lib/modules/base/UserNav.vue';
 </script>
 
 <template>

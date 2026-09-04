@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { moduleUrl } from '~/lib/modules/apps/myfeature/api';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/lib/modules/base/ui/card';
 </script>
 
 <template>

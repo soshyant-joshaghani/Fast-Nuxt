@@ -1,4 +1,6 @@
-import { createUser, deleteUser, listUsers, updateUser } from './users-api';
+import { createUser, deleteUser, listUsers, updateUser } from './users/api';
+
+export const APP_NAME = 'Fast-Nuxt';
 
 export type ManagedUser = {
   id: string;

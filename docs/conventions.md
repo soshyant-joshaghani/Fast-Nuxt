@@ -52,8 +52,8 @@ Simple features may omit service or repository — see the sample module for CRU
 | **`api.ts`** | HTTP calls, types, auth headers | DOM, Vue reactivity |
 | **`index.vue`** | UI, `ref`/`computed`, call `api.ts` | Direct hard-coded API URLs |
 | **`composables/`** | Shared reactive state (`useAuth`) | Feature-specific business logic |
-| **`lib/modules/global/`** | Auth fetch helpers, shared utils | Feature-specific logic |
-| **`components/ui/`** | shadcn-vue primitives | Feature-specific pages |
+| **`lib/modules/base/`** | Auth fetch helpers, shared utils | Feature-specific logic |
+| **`lib/modules/base/ui/`** | shadcn-vue primitives | Feature-specific pages |
 
 Import API base URL from `~/lib/config/backend` — never hard-code `http://localhost:8000`.
 
@@ -63,7 +63,7 @@ Use `useAuth()` for JWT token and user state — do not duplicate auth storage.
 
 - Use `<script setup lang="ts">` in page and layout components.
 - Auto-imports: Nuxt provides `useAuth`, `useRoute`, `navigateTo`, etc. without explicit imports when defined as composables.
-- Path alias: `~/` maps to the `frontend/` root (`~/lib/...`, `~/components/...`).
+- Path alias: `~/` maps to the `frontend/` root (`~/lib/...`, `~/lib/...`).
 - Authenticated routes live under `pages/(dashboard)/`; public auth at `pages/login.vue`.
 - Route groups `(dashboard)` do not appear in the URL — `(dashboard)/sample/notes/index.vue` → `/sample/notes`.
 
