@@ -1,0 +1,1 @@
+"""fast-nuxt-ctrl utilities."""
